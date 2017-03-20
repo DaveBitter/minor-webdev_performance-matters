@@ -1,0 +1,9 @@
+include ../partials/layout
+
+	section#movies
+		each movie in movies
+			article
+				a(href='/movie/' + movie.id)
+					h1=movie.title
+					sup=movie.tagline
+					img(src='http://image.tmdb.org/t/p/w500/' + movie.poster_path)
