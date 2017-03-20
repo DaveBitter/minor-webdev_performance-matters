@@ -1,12 +1,12 @@
 var express = require('express')
 var app = express()
 
+var indexRouter = require('./routes/index.js')
+
 app.set('view engine', 'pug')
 
 app.use(express.static('public'))
 
-app.get('/', function (req, res) {
-  res.render('components/hello')
-})
+app.use('/', indexRouter);
 
 app.listen(1337)
