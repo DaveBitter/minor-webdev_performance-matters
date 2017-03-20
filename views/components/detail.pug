@@ -1,0 +1,40 @@
+extends ../layout.pug
+
+block content
+	section#movie
+		article
+			header
+				h1=movie.title
+				sup=movie.sup
+			hr
+			.content
+				img(src='http://image.tmdb.org/t/p/w500/' + movie.poster_path)
+				.info
+					h3 Summary
+					p=movie.overview
+					ul
+						li
+							h4 Budget (USD)
+							if movie.budget
+								p=movie.budget
+							else
+								p currently unknown
+
+						li
+							h4 Revenue (USD)
+							if movie.revenue
+								p=movie.revenue
+							else
+								p currently unknown
+						li
+							h4 Release date
+							p=movie.release_date
+						li
+							h4 Runtime
+							if movie.runtime
+								p=movie.runtime
+							else
+								p currently unknown
+						li
+							h4 Check on IMDB
+							a='http://imdb.com/title/' + movie.id
