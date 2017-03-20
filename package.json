@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/DaveBitter/minor-webdev_performance-matters#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-beta11"

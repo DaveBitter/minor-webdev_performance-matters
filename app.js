@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express')
 const app = express()
 
@@ -9,7 +11,6 @@ app
 	.set('view engine', 'pug')
 	.use(express.static('public'))
 	.use('/', indexRouter)
-
-app.listen(port, () => {
-	console.log('Started server on http://localhost:' + port)
-})
+	.listen(port, () => {
+		console.log('Started server on http://localhost:' + port)
+	})
