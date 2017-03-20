@@ -8,7 +8,7 @@ block content
 				sup=movie.sup
 			hr
 			.content
-				img(src='http://image.tmdb.org/t/p/w500/' + movie.poster_path)
+				img(src=movie.poster_path)
 				.info
 					h3 Summary
 					p=movie.overview
@@ -28,7 +28,10 @@ block content
 								p currently unknown
 						li
 							h4 Release date
-							p=movie.release_date
+							if movie.release_date
+								p=movie.release_date
+							else
+								p currently unknown
 						li
 							h4 Runtime
 							if movie.runtime
@@ -37,4 +40,4 @@ block content
 								p currently unknown
 						li
 							h4 Check on IMDB
-							a='http://imdb.com/title/' + movie.id
+							a=movie.imdb_link

@@ -91,7 +91,6 @@ body>header button {
     cursor: pointer;
     border-right: .2rem solid #d04442;
     background-color: #ea4a48;
-    ;
 }
 
 body>header button:focus, body>header button:hover {
