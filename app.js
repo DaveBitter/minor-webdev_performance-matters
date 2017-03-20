@@ -1,12 +1,15 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
 
-var indexRouter = require('./routes/index.js')
+const port = 1337
 
-app.set('view engine', 'pug')
+const indexRouter = require('./routes/index.js')
 
-app.use(express.static('public'))
+app
+	.set('view engine', 'pug')
+	.use(express.static('public'))
+	.use('/', indexRouter)
 
-app.use('/', indexRouter);
-
-app.listen(1337)
+app.listen(port, () => {
+	console.log('Started server on http://localhost:' + port)
+})
