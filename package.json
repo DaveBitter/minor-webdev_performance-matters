@@ -1,0 +1,24 @@
+{
+  "name": "performance-matters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveBitter/minor-webdev_performance-matters.git"
+  },
+  "author": "Dave Bitter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveBitter/minor-webdev_performance-matters/issues"
+  },
+  "homepage": "https://github.com/DaveBitter/minor-webdev_performance-matters#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-beta11"
+  }
+}
