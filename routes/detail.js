@@ -15,6 +15,16 @@ router.get('/:id', (req, res) => {
 		})
 })
 
+router.get('/:id/api', (req, res) => {
+	const id = req.params.id
+
+	unirest.get('http://api.themoviedb.org/3/movie/' + id + '?api_key=' + process.env.APIKEY)
+		.end(function (response) {
+			const movie = formatMovie(response.body)
+			res.json(movie)
+		})
+})
+
 const formatMovie = (movie) => {
 	movie.budget = currencyFormatter.format(movie.budget, { code: 'USD' })
 	movie.revenue = currencyFormatter.format(movie.revenue, { code: 'USD' })

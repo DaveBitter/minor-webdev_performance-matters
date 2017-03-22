@@ -36,7 +36,8 @@ main {
     margin: 0 auto;
 }
 
-body>header+* {
+body>header+*,
+body > #movie {
     margin-top: 8rem;
 }
 
@@ -192,10 +193,77 @@ article p {
     max-width: 30rem;
 }
 
+#movie-modal {
+    z-index: 10000000000;
+    display: none;
+    position: fixed;
+    top: 5em;
+    right: 20em;
+    bottom: 10em;
+    left: 20em;
+    max-height: calc(100% - 10em);
+}
+
+#movie-modal.open {
+    display: block;
+    animation-name: bounceInRight;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+}
+
+#movie-modal.open + .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .75
+}
+
+#movie-modal-content {
+    background-color: #333;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#movie-modal-content article {
+    background-color: #333;
+    padding: 1em;
+}
+
+button.close {
+    z-index: 1000000;
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    padding: 1.5em;
+    background-color: #ea4a48;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+button.close:hover,
+button.close:focus {
+    background-color: #d04442;
+}
+
+button.close:focus {
+    outline-color: #fff;
+}
+
+button.close:after {
+    content: "X";
+    color: #333;
+    font-weight: bolder;
+}
+
 #movie article {
     animation-name: bounceInRight;
     animation-duration: .3s;
     animation-fill-mode: both;
+    width: 100%;
 }
 
 #movie img {

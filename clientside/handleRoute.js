@@ -1,32 +1,22 @@
+const getData = require('./getData.js')
+const renderData = require('./renderData.js')
+
 function handleRoute (links) {
 	links.forEach(function(link) {
 		link.addEventListener("click", function(e) {
-			var id = e.target.parentElement.id
+			const id = e.target.parentElement.id
 
-			getData(id)
-				.then(id => formatData(id))
-				.then(id => render(id))
+			function handleLink(id) {
+				return new Promise(function(resolve, reject) {
+					resolve(id)
+				});
+			}
 
+			handleLink(id)
+				.then(id => getData(id))
+				// .then(data => renderData(data))
 		})
 	})
-
-	function getData(id) {
-		return new Promise(function(resolve, reject) {
-			console.log("getData: ", id)
-			resolve(id)
-		});
-	}
-
-
-	function formatData(id) {
-		console.log("formatData: ", id)
-		return id
-	}
-
-	function render(id) {
-		console.log("render: ", id)
-		return id
-	}
 }
 
 module.exports = handleRoute

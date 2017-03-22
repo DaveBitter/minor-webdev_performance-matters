@@ -1,6 +1,6 @@
 html
 	head
-		link(href='/assets/css/main.css', rel='stylesheet' type='text/css')
+		link(href='/assets/css/main.css', rel='stylesheet', type='text/css')
 	body
 		header
 			a(href='#')
@@ -8,4 +8,9 @@ html
 				p The most popular movies
 
 		block content
-		script(src="/assets/js/build.js" type="text/javascript")
+		#movie-modal
+			button.close
+			#movie-modal-content
+		.overlay
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/aja/0.4.1/aja.min.js', type='text/javascript')
+		script(src='/assets/js/build.js', type='text/javascript')
