@@ -14,7 +14,7 @@ function handleRoute (links) {
 
 			handleLink(id)
 				.then(id => getData(id))
-				// .then(data => renderData(data))
+				.then(data => renderData(data))
 		})
 	})
 }

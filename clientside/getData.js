@@ -1,10 +1,9 @@
 const getData = (id) => {
-	console.log('getData: ', id)
 	// do api call
-	// return the data
 	aja().url('/movie/' + id + '/api').on('success', function(data) {
 		renderData(data)
 	}).go();
+	// return the data
 }
 
 const renderData = (movie) => {
