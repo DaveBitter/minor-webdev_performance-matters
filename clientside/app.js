@@ -1,3 +1,7 @@
-var replaceWithHash= require('./replaceWithHash.js')
+var interceptLinks = require('./interceptLinks.js')
+var handleRoute = require('./handleRoute')
 
-replaceWithHash("google.com/test")
+var links = document.querySelectorAll('.detail-link');
+
+interceptLinks(links)
+handleRoute(links)
