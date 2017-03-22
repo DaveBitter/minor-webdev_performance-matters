@@ -5,9 +5,11 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
 	unirest.get('http://api.tmdb.org/3/discover/movie?api_key=' + process.env.APIKEY + '&sort_by=popularity.desc')
-		.end(function (response) {
+		.end(function(response) {
 			const movies = response.body.results
-			res.render('components/overview', {movies})
+			res.render('components/overview', {
+				movies
+			})
 		})
 })
 

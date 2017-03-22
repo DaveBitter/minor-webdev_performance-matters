@@ -1,7 +1,7 @@
 const getData = require('./getData.js')
 const renderData = require('./renderData.js')
 
-function handleRoute (links) {
+function handleRoute(links) {
 	links.forEach(function(link) {
 		link.addEventListener("click", function(e) {
 			const id = e.target.parentElement.id
