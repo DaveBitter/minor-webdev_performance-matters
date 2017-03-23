@@ -6,6 +6,7 @@ const getData = (id) => {
 	// return the data
 }
 
+// when the bug where the promise doesn't wait on the API call is fixed, this function can be placed in renderData.js
 const renderData = (movie) => {
 	const movieModal = document.querySelector('#movie-modal')
 	const movieModalContent = document.querySelector('#movie-modal-content')
