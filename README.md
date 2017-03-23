@@ -20,7 +20,7 @@ I highly encourage adding issues to this repo in the case of finding one. I'm al
     nmp install
 
 ### Get the credentials
-Contact me at < daveybitter@gmail.com > for the .env file to run this app.
+Contact me at <daveybitter@gmail.com> for the .env file to run this app.
 
 ### Start up the server
 When you run this command, changes in serverside JS files will be watched and the server will restart automatically, changes in clientside JS files will be watched and browserified and the server will be restarted.
