@@ -5,7 +5,6 @@ const getData = (id) => {
 	aja().url('/movie/' + id + '/api').on('success', function(data) {
 		renderData(data)
 	}).go();
-	// return the data
 }
 
 module.exports = getData

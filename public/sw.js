@@ -2,6 +2,7 @@ self.addEventListener('install', event => event.waitUntil(
     caches.open('wmtw-v1-core')
         .then(cache => cache.addAll([
             '/assets/offline/index.html',
+            '/assets/offline/app.js',
             '/assets/css/main.css',
             '/assets/images/logo.png'
         ]))

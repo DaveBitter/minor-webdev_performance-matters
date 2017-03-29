@@ -14,19 +14,28 @@ if ('serviceWorker' in navigator) {
 
 }
 
+
+
+// --------------- End of Service Worker bit -----------------------1
+
+
 const interceptLinks = require('./interceptLinks.js')
-const handleRoute = require('./handleRoute')
+const handleRoute = require('./handleRoute.js')
+const favorites = require('./favorites.js')
 
 const element = {
-	modal: document.querySelector('#movie-modal'),
-	modalClose: document.querySelector('button.close')
+	modal: document.getElementById('movie-modal'),
+	modalClose: document.querySelector('button.close'),
+	detailLinks: document.querySelectorAll('.detail-link'),
+	favoriteButtons: document.querySelectorAll('.favorite-button')
 }
 
 element.modalClose.addEventListener('click', function() {
 	element.modal.classList.remove('open')
 })
 
-const links = document.querySelectorAll('.detail-link');
 
-interceptLinks(links)
-handleRoute(links)
+interceptLinks(element.detailLinks)
+handleRoute(element.detailLinks)
+
+favorites(element.favoriteButtons)
