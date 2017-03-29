@@ -158,10 +158,10 @@ article p {
     z-index: 10000000000;
     display: none;
     position: fixed;
-    top: 5em;
-    right: 20em;
-    bottom: 10em;
-    left: 20em;
+    top: 5vh;
+    right: 20vw;
+    bottom: 10vh;
+    left: 20vw;
     max-height: calc(100% - 10em);
 }
 
