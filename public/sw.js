@@ -3,6 +3,7 @@ self.addEventListener('install', event => event.waitUntil(
         .then(cache => cache.addAll([
             '/assets/offline/index.html',
             '/assets/css/main.css',
+            '/assets/images/logo.png'
         ]))
         .then(self.skipWaiting())
 ));
