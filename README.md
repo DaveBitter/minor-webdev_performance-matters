@@ -1,7 +1,9 @@
 # Minor WebDev | Performance Matters
 Dave Bitter | 500710907
 
-    V 1.0.0
+![What Movie To Watch app](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/hero.jpg)
+
+    V 1.0.1
 
 ## General
 This repository holds the seperate exercises for the course 'Performance Matters', part of the minor "Webdevelopment" at the [HvA](http://www.hva.nl/)
@@ -17,7 +19,7 @@ I highly encourage adding issues to this repo in the case of finding one. I'm al
     cd minor-webdev_performance-matters
 
 ### Install the dependencies
-    nmp install
+    npm install
 
 ### Get the credentials
 Contact me at <daveybitter@gmail.com> for the .env file to run this app.
@@ -36,28 +38,33 @@ Watchify clientside JS
 
     npm run watch
 
-Clean clienside build.js file
+Clean clientside build.js file
 
     npm run clean
 
 ## Features
 ### No JS Fallback
+![app without Javascript](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/app_1.png)
+
 The app will use routing to load in detail pages for movies when no JS is available. The default behaviour will be prevented when you click on a link to the detail pages for movies when JS is available. Instead, their will be an API call on the clientside to get the data. After that, the detailled movie data will be shown in a pop-up modal.
 
 ### API call to own server
+![API call to own server](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/app_2.png)
+
 The clientside API call will be called to our own server in order to keep the API-key on the serverside. 
 
 I also do this so I can (re)use functions that are written in the serverside code. This prevents double JS work and reduces the amount/filesize of JS on the clientside.
 
-## Faster Loading from cache
-We only want to load detailed movie data once although the data being requested isn't that much. It makes sense to cahche the data and re-render the component based on that data. I used Local Storage to accomplish this. The app will check whether the required data is in Local Storage. It will do the API call to our own server otherwise.
+### Faster Loading from cache
+We only want to load detailed movie data once although the data being requested isn't that much. It makes sense to cache the data and re-render the component based on that data. I used Local Storage to accomplish this. The app will check whether the required data is in Local Storage. It will do the API call to our own server otherwise.
 
-## No Internet 
+### No Internet 
+![app without internet](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/app_3.png)
+
 The app will display a message and the latest viewed movies when there is no connection from the client to the server. It will use a Service Worker to cache the HTML, CSS, JS and image for rendering this page. It will use Local Storage to render the data for the latest viewed movies.
 
-## Extra optimizations
+### Extra optimizations
 I used the following techniques for optimizing the performance further:
 * G-Zip Compression
-* Minifying of HTML, CSS and JS (To be added)
 * Compressing of image
 
