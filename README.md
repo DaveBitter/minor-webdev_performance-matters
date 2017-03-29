@@ -19,7 +19,7 @@ I highly encourage adding issues to this repo in the case of finding one. I'm al
     cd minor-webdev_performance-matters
 
 ### Install the dependencies
-    nmp install
+    npm install
 
 ### Get the credentials
 Contact me at <daveybitter@gmail.com> for the .env file to run this app.
@@ -38,7 +38,7 @@ Watchify clientside JS
 
     npm run watch
 
-Clean clienside build.js file
+Clean clientside build.js file
 
     npm run clean
 
