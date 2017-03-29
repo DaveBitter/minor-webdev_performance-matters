@@ -43,6 +43,8 @@ Clean clientside build.js file
     npm run clean
 
 ## Features
+![user flow app](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/flow.png)
+
 ### No JS Fallback
 ![app without Javascript](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/app_1.png)
 
