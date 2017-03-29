@@ -6,25 +6,27 @@ const getData = (id) => {
 	}
 
 	let movies = JSON.parse(localStorage.getItem('movies'))
-	// do api call
-	aja().url('/movie/' + id + '/api').on('success', function(data) {
 
-		const found = movies.some(function(movie) {
-			return movie.id === data.id;
-		});
+	const movie = movies.find(function(result) {
+		return result.id == id
+	});
 
-		if (found == true) {
-			movies = movies.filter(function(movie) {
-				return movie.id !== data.id;
-			})
-
-		} else {
-			movies.push(data)
+	if (typeof movie !== 'undefined') {
+		movies = movies.filter(function(movie) {
+			return movie.id !== id;
+		})
+		movies.unshift(movie)
+		renderData(movie)
+	} else {
+		aja().url('/movie/' + id + '/api').on('success', function(data) {
+			movies.unshift(data)
 			localStorage.setItem('movies', JSON.stringify(movies))
-		}
 
-		renderData(data)
-	}).go();
+			renderData(data)
+		}).go();
+
+	}
+	// do api call
 }
 
 module.exports = getData
