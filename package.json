@@ -7,6 +7,12 @@
     "node": "6.9.4",
     "npm": "3.10.10"
   },
+  "scripts": {
+    "clean": "rm -rf ./public/assets/js/build.js",
+    "watch": "./node_modules/.bin/watchify ./clientside/app.js -o ./public/assets/js/build.js",
+    "build": "./node_modules/.bin/browserify ./clientside/app.js -o ./public/assets/js/build.js",
+    "start": "./node_modules/.bin/nodemon -e js & npm run watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DaveBitter/minor-webdev_performance-matters.git"
