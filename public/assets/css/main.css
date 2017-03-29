@@ -36,8 +36,8 @@ main {
     margin: 0 auto;
 }
 
-body>header+*, body>#movie {
-    margin-top: 8rem;
+body>header+*{
+    margin-top: 5rem;
 }
 
 body>header * {

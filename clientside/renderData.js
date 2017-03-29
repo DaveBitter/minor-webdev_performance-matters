@@ -1,12 +1,9 @@
-const favorites = require('./favorites.js')
-
 const renderData = (movie) => {
 	const movieModal = document.querySelector('#movie-modal')
 	const movieModalContent = document.querySelector('#movie-modal-content')
 
 	const template = [
 		'<article>',
-		'<button id="modal-save-button" class="favorite-button" data-id="' + movie.id +'">Save for offline</button>',
 		'<header>',
 		'<h1>' + movie.title + '</h1>',
 		'<sup> ' + movie.tagline + ' </sup>',
@@ -44,12 +41,8 @@ const renderData = (movie) => {
 		'</article>'
 	].join("\n");
 
-	// HACKY
-	// The eventlistener needs to be added to to freshly generated button
 	movieModalContent.innerHTML = template
 	movieModal.classList.add('open')
-	const button = document.getElementById('modal-save-button')
-	favorites([button])
 }
 
 
