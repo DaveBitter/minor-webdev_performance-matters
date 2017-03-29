@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "clean" : "rm -rf ./public/assets/js/build.js",
+    "clean": "rm -rf ./public/assets/js/build.js",
     "watch": "watchify ./clientside/app.js -o ./public/assets/js/build.js",
     "build": "browserify ./clientside/app.js -o ./public/assets/js/build.js",
     "start": "nodemon -e js & npm run watch"
@@ -28,5 +28,10 @@
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-beta11",
     "unirest": "^0.5.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "nodemon": "^1.11.0",
+    "watchify": "^3.9.0"
   }
 }
