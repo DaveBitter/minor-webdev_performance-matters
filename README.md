@@ -1,6 +1,8 @@
 # Minor WebDev | Performance Matters
 Dave Bitter | 500710907
 
+![What Movie To Watch app](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/develop/screenshots/hero.jpg)
+
     V 1.0.0
 
 ## General
