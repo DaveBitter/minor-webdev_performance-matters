@@ -13,6 +13,6 @@ app
 	.use(express.static('public'))
 	.use('/', indexRouter)
 	.use('/movie', detailRouter)
-	.listen(port, () => {
+	.listen(process.env.PORT || port, () => {
 		console.log('Started server on http://localhost:' + port)
 	})
