@@ -14,8 +14,6 @@ function handleRoute(links) {
 
 			handleLink(id)
 				.then(id => getData(id))
-				// need to fix the bug where the promise doesn't wait on the API call
-				// .then(data => renderData(data))
 		})
 	})
 }

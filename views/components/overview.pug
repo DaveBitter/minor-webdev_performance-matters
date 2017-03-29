@@ -4,6 +4,6 @@ block content
 	section#movies
 		each movie in movies
 			article
+				h1=movie.title
 				a.detail-link(href='/movie/' + movie.id, id=movie.id)
-					h1=movie.title
 					img(src='http://image.tmdb.org/t/p/w500/' + movie.poster_path)

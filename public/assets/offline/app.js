@@ -1,8 +1,9 @@
-const renderData = (movie) => {
-	const movieModal = document.querySelector('#movie-modal')
-	const movieModalContent = document.querySelector('#movie-modal-content')
+const movies = JSON.parse(localStorage.getItem('movies'))
+const body = document.querySelector('body')
 
+movies.forEach(function(movie) {
 	const template = [
+		'<section id="movie">',
 		'<article>',
 		'<header>',
 		'<h1>' + movie.title + '</h1>',
@@ -38,12 +39,9 @@ const renderData = (movie) => {
 		'</ul>',
 		'</div>',
 		'</div>',
-		'</article>'
+		'</article>',
+		'</setion>'
 	].join("\n");
 
-	movieModalContent.innerHTML = template
-	movieModal.classList.add('open')
-}
-
-
-module.exports = renderData
+	body.innerHTML += template
+})

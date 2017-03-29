@@ -48,3 +48,16 @@ The app will use routing to load in detail pages for movies when no JS is availa
 The clientside API call will be called to our own server in order to keep the API-key on the serverside. 
 
 I also do this so I can (re)use functions that are written in the serverside code. This prevents double JS work and reduces the amount/filesize of JS on the clientside.
+
+## Faster Loading from cache
+We only want to load detailed movie data once although the data being requested isn't that much. It makes sense to cahche the data and re-render the component based on that data. I used Local Storage to accomplish this. The app will check whether the required data is in Local Storage. It will do the API call to our own server otherwise.
+
+## No Internet 
+The app will display a message and the latest viewed movies when there is no connection from the client to the server. It will use a Service Worker to cache the HTML, CSS, JS and image for rendering this page. It will use Local Storage to render the data for the latest viewed movies.
+
+## Extra optimizations
+I used the following techniques for optimizing the performance further:
+* G-Zip Compression
+* Minifying of HTML, CSS and JS (To be added)
+* Compressing of image
+

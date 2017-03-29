@@ -1,0 +1,19 @@
+{
+  "name": "What Movie To Watch",
+  "short_name": "WMTW",
+  "description": null,
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "background_color": "#333333",
+  "theme_color": "#FF0000",
+  "icons": [
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
