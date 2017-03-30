@@ -78,5 +78,5 @@ The lighthouse score I got was 87/100. The points that need optimization are col
 [Lighthouse report](http://webdev.davebitter.com/exercises/pm/lighthouse/)
 
 ## License
-[MIT](LICENSE.md) © [Dave Bitter][home]
+[MIT](LICENSE.md) © [Dave Bitter](https://github.com/DaveBitter/)
 
