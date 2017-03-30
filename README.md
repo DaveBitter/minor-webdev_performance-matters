@@ -3,8 +3,7 @@ Dave Bitter | 500710907
 
 ![What Movie To Watch app](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/hero.jpg)
 
-    V 1.0.1
-
+    V 1.0.2
 ## General
 This repository holds the seperate exercises for the course 'Performance Matters', part of the minor "Webdevelopment" at the [HvA](http://www.hva.nl/)
 
@@ -45,6 +44,8 @@ Clean clientside build.js file
 ## Features
 ![user flow app](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/flow.png)
 
+This takes the lack of JS and flaky internet connections in account. The process above is realized by the features below.
+
 ### No JS Fallback
 ![app without Javascript](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/app_1.png)
 
@@ -69,4 +70,12 @@ The app will display a message and the latest viewed movies when there is no con
 I used the following techniques for optimizing the performance further:
 * G-Zip Compression
 * Compressing of image
+
+### Lighthouse
+The lighthouse score I got was 87/100. The points that need optimization are color contrast and using HTTPS instead of TLS. I disagree with the first one. I didn't have the time for the second one. You can view the report below.
+
+[Lighthouse report](http://webdev.davebitter.com/exercises/pm/lighthouse/)
+
+## License
+[MIT](LICENSE.md) © [Dave Bitter](https://github.com/DaveBitter/)
 

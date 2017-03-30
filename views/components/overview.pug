@@ -5,5 +5,5 @@ block content
 		each movie in movies
 			article
 				h1=movie.title
-				a.detail-link(href='/movie/' + movie.id, id=movie.id)
-					img(src='http://image.tmdb.org/t/p/w500/' + movie.poster_path)
+				a.detail-link(href='/movie/' + movie.id, id=movie.id, title='view more information about the movie ' + movie.title + ' on IMDB')
+					img(src='http://image.tmdb.org/t/p/w500/' + movie.poster_path, alt='poster ' + movie.title, title='poster ' + movie.title)

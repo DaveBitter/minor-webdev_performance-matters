@@ -36,7 +36,7 @@ main {
     margin: 0 auto;
 }
 
-body>header+*{
+body>header+* {
     margin-top: 5rem;
 }
 
@@ -158,11 +158,19 @@ article p {
     z-index: 10000000000;
     display: none;
     position: fixed;
-    top: 5vh;
+    top: 10vh;
     right: 10vw;
     bottom: 10vh;
     left: 10vw;
     max-height: calc(100% - 10em);
+}
+
+@media(min-width:60em) {
+    #movie-modal {
+        right: 30vw;
+        bottom: 10vh;
+        left: 30vw;
+    }
 }
 
 #movie-modal.open {
@@ -173,6 +181,7 @@ article p {
 }
 
 #movie-modal.open+.overlay {
+    z-index: 10000;
     position: fixed;
     top: 0;
     right: 0;

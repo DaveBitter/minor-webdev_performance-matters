@@ -8,7 +8,7 @@ block content
 				sup=movie.tagline
 			hr
 			.content
-				img(src=movie.poster_path)
+				img(src=movie.poster_path, alt='poster ' + movie.title, title='poster ' + movie.title)
 				.info
 					h3 Summary
 					p=movie.overview
@@ -40,4 +40,4 @@ block content
 								p currently unknown
 						li
 							h4 Check on IMDB
-							a=movie.imdb_link
+							a(href=movie.imdb_link, target='_blank', title='view more information about the movie ' + movie.title)=movie.imdb_link
