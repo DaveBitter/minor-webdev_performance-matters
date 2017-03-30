@@ -44,6 +44,7 @@ Clean clientside build.js file
 
 ## Features
 ![user flow app](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/flow.png)
+
 This takes the lack of JS and flaky internet connections in account. The process above is realized by the features below.
 
 ### No JS Fallback
