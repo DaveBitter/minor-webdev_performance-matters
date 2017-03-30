@@ -3,8 +3,7 @@ Dave Bitter | 500710907
 
 ![What Movie To Watch app](https://raw.githubusercontent.com/DaveBitter/minor-webdev_performance-matters/master/screenshots/hero.jpg)
 
-    V 1.0.1
-
+    V 1.0.2
 ## General
 This repository holds the seperate exercises for the course 'Performance Matters', part of the minor "Webdevelopment" at the [HvA](http://www.hva.nl/)
 
