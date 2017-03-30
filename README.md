@@ -70,3 +70,8 @@ I used the following techniques for optimizing the performance further:
 * G-Zip Compression
 * Compressing of image
 
+### Lighthouse
+The lighthouse score I got was 87/100. The points that need optimization are color contrast and using HTTPS instead of TLS. I disagree with the first one. I didn't have the time for the second one. You can view the report below.
+
+[Lighthouse report](http://webdev.davebitter.com/exercises/pm/lighthouse/)
+
